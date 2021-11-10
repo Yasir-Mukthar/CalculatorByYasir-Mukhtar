@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items:center;
+            flex-direction: column;
+
+        }
+        .calculator{
+            width: 450px;
+            height: 450px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 5px auto;
+            border-radius: 15px;
+            background-color: red;
+        }
+        form{
+            width: 420px;
+            height: 400px;
+            
+            margin: 30px auto;
+            
+        
+            
+            
+        }
+        .inputvalue{
+            border: 2px solid black;
+            
+            border-radius: 15px;
+            width: 96%;
+            
+            font-size: 40px;
+            padding: 3px 5px;
+            
+        }
+        .btn{
+            background-color: rgb(196, 28, 79);
+            text-align: center;
+            font-size: 30px;
+            width: 97px;
+            height: 60px;
+            border-radius: 15px;
+            margin-top: 4px;
+            color: black;
+        }
+        #equalid{
+                 width: 96%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculator --- Developed By Yasir Mukhtar</h1>
+
+    <div class="calculator">
+    <form name="form">
+        <input type="text" name="value" class="inputvalue"><br>
+
+        <input type="button" class="btn" value=" 7 " onclick="form.value.value += '7' ">
+        <input type="button" class="btn" value=" 8 " onclick="form.value.value += '8' ">
+        <input type="button" class="btn" value=" 9 " onclick="form.value.value += '9' ">
+        <input type="button" class="btn" value=" + " onclick="form.value.value += '+' "><br>
+        <input type="button" class="btn" value=" 4 " onclick="form.value.value += '4' ">
+        <input type="button" class="btn" value=" 5 " onclick="form.value.value += '5' ">
+        <input type="button" class="btn" value=" 6 " onclick="form.value.value += '6' ">
+        <input type="button" class="btn" value=" - " onclick="form.value.value += '-' "><br>
+        <input type="button" class="btn" value=" 1 " onclick="form.value.value += '1' ">
+        <input type="button" class="btn" value=" 2 " onclick="form.value.value += '2' ">
+        <input type="button" class="btn" value=" 3 " onclick="form.value.value += '3' ">
+        <input type="button" class="btn" value=" / " onclick="form.value.value += '/' "><br>
+        <input type="button" class="btn" value=" 0 " onclick="form.value.value += '0' ">
+        <input type="button" class="btn" value=" . " onclick="form.value.value += '.' ">
+        <input type="button" class="btn" value=" * " onclick="form.value.value+='*'">
+        <input type="button" class="btn" value=" Clr " onclick="Clr()"><br>
+        <input type="button" class="btn" id="equalid" value=" = " onclick="equal() ">
+
+    </form>
+        
+    </div>
+
+
+
+
+
+
+    <!-- -------------JS ----------- -->
+    <script>
+
+
+function equal(){
+    
+        if(form.value.value==""){
+        form.value.value="";
+    }else{
+        form.value.value =eval(form.value.value)
+    } 
+}
+function Clr(){
+    form.value.value='';
+} 
+    </script>
+
+
+
+   
+    
+</body>
+</html>
